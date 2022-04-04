@@ -1,6 +1,29 @@
 #!/bin/bash
+#
+#    Put '. $HOME/.tmux/start-tmux.sh' at the end of $HOME/.profile
+#    to automatically start tmux on login
+#
+#    Copyright (C) 2008 Canonical Ltd.
+#    Copyright (C) 2011-2014 Dustin Kirkland
+#    Copyright (C) 2022 Alexander Lochmann
+#
+#    Authors: Dustin Kirkland <kirkland@byobu.org>
+#             Alexander Lochmann <info@alexander-lochmann.de>
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License as published by
+#    the Free Software Foundation, version 3 of the License.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+#
+#    You should have received a copy of the GNU General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-# Shamelessly stolen from /usr/bin/byobu-launch{,er}
+#    Using shamelessly stolen parts from /usr/bin/byobu-launch{,er}
+
 _tty=$(tty)
 if [ "${_tty#/dev/ttyS}" != "$_tty" ] && [ "${_tty#/dev/ttyAMA}" != "$_tty" ]; then
 	# Don't autolaunch tmux on serial consoles

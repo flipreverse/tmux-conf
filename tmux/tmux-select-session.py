@@ -3,9 +3,11 @@
 #    select-session.py
 #    Copyright (C) 2010 Canonical Ltd.
 #    Copyright (C) 2012-2014 Dustin Kirkland <kirkland@byobu.org>
+#    Copyright (C) 2011-2022 Alexander Lochmann
 #
 #    Authors: Dustin Kirkland <kirkland@byobu.org>
 #             Ryan C. Thompson <rct@thompsonclan.org>
+#             Alexander Lochmann <info@alexander-lochmann.de>
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU General Public License as published by
@@ -19,6 +21,7 @@
 #    You should have received a copy of the GNU General Public License
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+#    Based on the original byobu script 'select-session.py'
 
 import os
 import re
