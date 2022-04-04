@@ -1,0 +1,33 @@
+#!/bin/bash -e
+#
+#    reboot_required: determine if a reboot is required
+#
+#    Copyright (C) 2008 Canonical Ltd.
+#    Copyright (C) 2011-2014 Dustin Kirkland
+#
+#    Authors: Dustin Kirkland <kirkland@byobu.org>
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License as published by
+#    the Free Software Foundation, version 3 of the License.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+#
+#    You should have received a copy of the GNU General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+. $HOME/.tmux/env.sh
+
+REBOOT_FLAG="/var/run/reboot-required"
+RELOAD_FLAG="$CACHE_DIR/reload-required"
+
+if [ -e "$UNATTENDED_UPGRADE_FLAG" ]; then
+	printf "#[bg=red,fg=brightwhite,bold]$ICON_UPGRADE#[default] "
+fi
+if [ -e "$REBOOT_FLAG" ]; then
+	printf "#[bg=black,fg=red]$ICON_REBOOT#[default]";
+fi
+
+# vi: syntax=sh ts=4 noexpandtab
