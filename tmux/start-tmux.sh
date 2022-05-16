@@ -23,6 +23,7 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #    Using shamelessly stolen parts from /usr/bin/byobu-launch{,er}
+. $HOME/.tmux/env.sh
 
 _tty=$(tty)
 if [ "${_tty#/dev/ttyS}" != "$_tty" ] && [ "${_tty#/dev/ttyAMA}" != "$_tty" ]; then
