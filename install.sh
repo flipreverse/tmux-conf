@@ -7,4 +7,4 @@ cp -f "$HOME/.tmux.conf" "$HOME/.tmux.conf.bak" 2>/dev/null || true
 cp -a ./tmux/. $HOME/.tmux/
 ln -sf .tmux/tmux.conf $HOME/.tmux.conf
 
-echo ". $HOME/.tmux/start-tmux.sh" >> $HOME/.profile
+echo ". \$HOME/.tmux/start-tmux.sh" >> $HOME/.profile
